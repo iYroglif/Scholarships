@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7590B56-2F8C-4858-8F9F-83EB796DB522}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Автоматизированная_Система_Стипендии</RootNamespace>
+    <AssemblyName>Автоматизированная Система Стипендии</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Авторизация.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Авторизация.Designer.cs">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ввод, просмотр и редактирование данных.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ввод, просмотр и редактирование данных.Designer.cs">
+      <DependentUpon>Ввод, просмотр и редактирование данных.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Виды стипендий.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Виды стипендий.Designer.cs">
+      <DependentUpon>Виды стипендий.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Группы.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Группы.Designer.cs">
+      <DependentUpon>Группы.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Группы_Студенты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Группы_Студенты.Designer.cs">
+      <DependentUpon>Группы_Студенты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Зачисление стипендий.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Зачисление стипендий.Designer.cs">
+      <DependentUpon>Зачисление стипендий.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Кафедры.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Кафедры.Designer.cs">
+      <DependentUpon>Кафедры.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Меню %28администратор%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Меню %28администратор%29.Designer.cs">
+      <DependentUpon>Меню %28администратор%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Меню %28сотрудник%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Меню %28сотрудник%29.Designer.cs">
+      <DependentUpon>Меню %28сотрудник%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Меню %28студент%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Меню %28студент%29.Designer.cs">
+      <DependentUpon>Меню %28студент%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="О Автоматизированной системе.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="О Автоматизированной системе.Designer.cs">
+      <DependentUpon>О Автоматизированной системе.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Отчеты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчеты.Designer.cs">
+      <DependentUpon>Отчеты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Редактирование данных о студенте.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Редактирование данных о студенте.Designer.cs">
+      <DependentUpon>Редактирование данных о студенте.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Результаты сессии.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Результаты сессии.Designer.cs">
+      <DependentUpon>Результаты сессии.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Социальные признаки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Социальные признаки.Designer.cs">
+      <DependentUpon>Социальные признаки.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Студенты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Студенты.Designer.cs">
+      <DependentUpon>Студенты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Факультеты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Факультеты.Designer.cs">
+      <DependentUpon>Факультеты.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Авторизация.resx">
+      <DependentUpon>Авторизация.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ввод, просмотр и редактирование данных.resx">
+      <DependentUpon>Ввод, просмотр и редактирование данных.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Виды стипендий.resx">
+      <DependentUpon>Виды стипендий.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Группы.resx">
+      <DependentUpon>Группы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Группы_Студенты.resx">
+      <DependentUpon>Группы_Студенты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Зачисление стипендий.resx">
+      <DependentUpon>Зачисление стипендий.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Кафедры.resx">
+      <DependentUpon>Кафедры.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Меню %28администратор%29.resx">
+      <DependentUpon>Меню %28администратор%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Меню %28сотрудник%29.resx">
+      <DependentUpon>Меню %28сотрудник%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Меню %28студент%29.resx">
+      <DependentUpon>Меню %28студент%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="О Автоматизированной системе.resx">
+      <DependentUpon>О Автоматизированной системе.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отчеты.resx">
+      <DependentUpon>Отчеты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Редактирование данных о студенте.resx">
+      <DependentUpon>Редактирование данных о студенте.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Результаты сессии.resx">
+      <DependentUpon>Результаты сессии.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Социальные признаки.resx">
+      <DependentUpon>Социальные признаки.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Студенты.resx">
+      <DependentUpon>Студенты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Факультеты.resx">
+      <DependentUpon>Факультеты.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="about.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="background2old.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="background3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
