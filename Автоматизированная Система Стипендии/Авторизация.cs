@@ -24,7 +24,7 @@ namespace Автоматизированная_Система_Стипендии
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //1
+            //
             /*Отчеты newForm = new Отчеты();
             newForm.Show();*/
             //
@@ -40,7 +40,7 @@ namespace Автоматизированная_Система_Стипендии
                                 if (textBox1.Text.ToString() == authDate[i][1]) 
                                 {
                                     Меню__администратор_ menuForm = new Меню__администратор_(mybdpath);
-                                    menuForm.Show();
+                                    menuForm.ShowDialog();
                                 }
                                 else MessageBox.Show("Неверный пароль", "Ошибка");
                             }
@@ -54,7 +54,7 @@ namespace Автоматизированная_Система_Стипендии
                                 if (textBox1.Text.ToString() == authDate[i][1])
                                 {
                                     Меню__сотрудник_ menuForm = new Меню__сотрудник_(mybdpath);
-                                    menuForm.Show();
+                                    menuForm.ShowDialog();
                                 }
                                 else MessageBox.Show("Неверный пароль", "Ошибка");
                             }
@@ -68,7 +68,8 @@ namespace Автоматизированная_Система_Стипендии
                                 if (textBox1.Text.ToString() == authDate[i][1]) 
                                 {
                                     Меню__студент_ menuForm = new Меню__студент_(mybdpath);
-                                    menuForm.ShowDialog();
+                                    menuForm.Show();
+                                    Hide();
                                 }
                                 else MessageBox.Show("Неверный пароль", "Ошибка");
                             }

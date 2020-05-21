@@ -24,7 +24,7 @@ namespace Автоматизированная_Система_Стипендии
             OleDbConnection connection = new OleDbConnection(conStr);
             OleDbDataAdapter adapter = new OleDbDataAdapter();
             connection.Open();
-            OleDbCommand command = new OleDbCommand("SELECT * FROM Студенты", connection);
+            OleDbCommand command = new OleDbCommand("SELECT * FROM ((Студенты INNER JOIN [Результаты сессии] ON [Результаты сессии].ID = Студенты.[ID сессии]) INNER JOIN [Социальные признаки] ON [Социальные признаки].ID = Студенты.[ID социальный]) INNER JOIN Группы ON Группы.ID = Студенты.[ID группы]", connection);
             connection.Close();
             adapter.SelectCommand = command;
             DataTable dt = new DataTable();
@@ -34,6 +34,36 @@ namespace Автоматизированная_Система_Стипендии
             bs.DataSource = dt;
             bindingNavigator1.BindingSource = bs;
             //dataGridView1.DataSource = bs;
+            textBox1.DataBindings.Add(new Binding("Text", bs, "ID студента", true));
+            textBox2.DataBindings.Add(new Binding("Text", bs, "Лицевой счет", true));
+            textBox3.DataBindings.Add(new Binding("Text", bs, "Фамилия", true));
+            textBox4.DataBindings.Add(new Binding("Text", bs, "Имя", true));
+            textBox5.DataBindings.Add(new Binding("Text", bs, "Отчество", true));
+            textBox6.DataBindings.Add(new Binding("Text", bs, "Курс", true));
+            textBox7.DataBindings.Add(new Binding("Text", bs, "Телефон", true));
+
+            ArrayList row = new ArrayList();
+            foreach (DataRow dr in dt.Rows) {
+                row.Add(dr["Сессия закрыта на"].ToString());
+            }
+            comboBox1.Items.AddRange(row.ToArray());
+            comboBox1.DataBindings.Add(new Binding("Text", bs, "Сессия закрыта на", true));
+
+            row = new ArrayList();
+            foreach (DataRow dr in dt.Rows)
+            {
+                row.Add(dr["Социальный признак"].ToString());
+            }
+            comboBox2.Items.AddRange(row.ToArray());
+            comboBox2.DataBindings.Add(new Binding("Text", bs, "Социальный признак", true));
+
+            row = new ArrayList();
+            foreach (DataRow dr in dt.Rows)
+            {
+                row.Add(dr["Группа"].ToString());
+            }
+            comboBox3.Items.AddRange(row.ToArray());
+            comboBox3.DataBindings.Add(new Binding("Text", bs, "Группа", true));
 
             connection = new OleDbConnection(conStr);
             adapter = new OleDbDataAdapter();

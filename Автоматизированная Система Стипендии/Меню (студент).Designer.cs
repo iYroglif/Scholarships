@@ -92,6 +92,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Меню__студент_";
             this.Text = "Меню (студент)";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Меню__студент__FormClosed);
+            this.Load += new System.EventHandler(this.Меню__студент__Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
