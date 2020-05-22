@@ -23,6 +23,7 @@ namespace Автоматизированная_Система_Стипендии
         {
             Зачисление_стипендий__сотрудник_ newForm = new Зачисление_стипендий__сотрудник_(mybdpath);
             newForm.Show();
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

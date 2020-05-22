@@ -20,6 +20,31 @@ namespace Автоматизированная_Система_Стипендии
         public Авторизация()
         {
             InitializeComponent();
+            //
+            authDate = new List<string[]>();
+            comboBox1.Items.Clear();
+            mybdpath = textBox2.Text;
+            string conStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + mybdpath;
+            OleDbConnection connection = new OleDbConnection(conStr);
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            try
+            {
+                connection.Open();
+                OleDbCommand command = new OleDbCommand("SELECT *FROM `Группы пользователей`;", connection);
+                OleDbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    string[] temp = new string[2];
+                    temp[0] = reader[1].ToString();
+                    temp[1] = reader[2].ToString();
+                    authDate.Add(temp);
+                    comboBox1.Items.Add(temp[0]);
+                }
+                reader.Close();
+                connection.Close();
+            }
+            catch { }
+            //
         }
 
         private void button1_Click(object sender, EventArgs e)
