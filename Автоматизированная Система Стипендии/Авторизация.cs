@@ -25,10 +25,10 @@ namespace Автоматизированная_Система_Стипендии
         private void button1_Click(object sender, EventArgs e)
         {
             //
-
+            /*
             Меню__администратор_ newForm = new Меню__администратор_(mybdpath);
             newForm.Show();
-            
+            */
             //
             if (comboBox1.SelectedItem != null)
             {

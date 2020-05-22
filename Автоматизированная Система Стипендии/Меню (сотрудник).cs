@@ -21,13 +21,13 @@ namespace Автоматизированная_Система_Стипендии
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Зачисление_стипендий newForm = new Зачисление_стипендий(mybdpath);
+            Зачисление_стипендий__сотрудник_ newForm = new Зачисление_стипендий__сотрудник_(mybdpath);
             newForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Результаты_сессии newForm = new Результаты_сессии(mybdpath);
+            Результаты_сессии__сотрудник_ newForm = new Результаты_сессии__сотрудник_(mybdpath);
             newForm.Show();
             Close();
         }

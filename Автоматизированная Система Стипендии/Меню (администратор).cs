@@ -35,7 +35,7 @@ namespace Автоматизированная_Система_Стипендии
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Меню__администратор_ newForm = new Меню__администратор_(mybdpath);
+            Авторизация newForm = new Авторизация();
             newForm.Show();
             Close();
         }

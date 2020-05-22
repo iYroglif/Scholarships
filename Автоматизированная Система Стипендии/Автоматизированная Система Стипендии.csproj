@@ -95,6 +95,12 @@
     <Compile Include="Группы_Студенты.Designer.cs">
       <DependentUpon>Группы_Студенты.cs</DependentUpon>
     </Compile>
+    <Compile Include="Зачисление стипендий %28сотрудник%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Зачисление стипендий %28сотрудник%29.Designer.cs">
+      <DependentUpon>Зачисление стипендий %28сотрудник%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Зачисление стипендий.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,12 @@
     <Compile Include="Редактирование данных о студенте.Designer.cs">
       <DependentUpon>Редактирование данных о студенте.cs</DependentUpon>
     </Compile>
+    <Compile Include="Результаты сессии %28сотрудник%29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Результаты сессии %28сотрудник%29.Designer.cs">
+      <DependentUpon>Результаты сессии %28сотрудник%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="Результаты сессии.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +248,9 @@
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
     <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Зачисление стипендий %28сотрудник%29.resx">
+      <DependentUpon>Зачисление стипендий %28сотрудник%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Отчет Виды стипендий.resx">
       <DependentUpon>Отчет Виды стипендий.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Редактирование данных о студенте.resx">
       <DependentUpon>Редактирование данных о студенте.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Результаты сессии %28сотрудник%29.resx">
+      <DependentUpon>Результаты сессии %28сотрудник%29.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Результаты сессии.resx">
       <DependentUpon>Результаты сессии.cs</DependentUpon>
