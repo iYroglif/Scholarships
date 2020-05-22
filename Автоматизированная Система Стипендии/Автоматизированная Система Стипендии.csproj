@@ -107,12 +107,6 @@
     <Compile Include="Кафедры.Designer.cs">
       <DependentUpon>Кафедры.cs</DependentUpon>
     </Compile>
-    <Compile Include="Копия Отчет Студенты.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Копия Отчет Студенты.Designer.cs">
-      <DependentUpon>Копия Отчет Студенты.cs</DependentUpon>
-    </Compile>
     <Compile Include="Меню %28администратор%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,17 +131,53 @@
     <Compile Include="О Автоматизированной системе.Designer.cs">
       <DependentUpon>О Автоматизированной системе.cs</DependentUpon>
     </Compile>
+    <Compile Include="Отчет Виды стипендий.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет Виды стипендий.Designer.cs">
+      <DependentUpon>Отчет Виды стипендий.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Отчет Выплаты стипендий студента.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет Выплаты стипендий студента.Designer.cs">
+      <DependentUpon>Отчет Выплаты стипендий студента.cs</DependentUpon>
+    </Compile>
     <Compile Include="Отчет Результаты сессии.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Отчет Результаты сессии.Designer.cs">
       <DependentUpon>Отчет Результаты сессии.cs</DependentUpon>
     </Compile>
+    <Compile Include="Отчет Социальные признаки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет Социальные признаки.Designer.cs">
+      <DependentUpon>Отчет Социальные признаки.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Отчет Студенты отличники.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет Студенты отличники.Designer.cs">
+      <DependentUpon>Отчет Студенты отличники.cs</DependentUpon>
+    </Compile>
     <Compile Include="Отчет Студенты.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Отчет Студенты.Designer.cs">
       <DependentUpon>Отчет Студенты.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Отчет Сумма зачисленных стипендий по месяцам.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет Сумма зачисленных стипендий по месяцам.Designer.cs">
+      <DependentUpon>Отчет Сумма зачисленных стипендий по месяцам.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Отчет Сумма зачисленных стипендий по факультетам.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет Сумма зачисленных стипендий по факультетам.Designer.cs">
+      <DependentUpon>Отчет Сумма зачисленных стипендий по факультетам.cs</DependentUpon>
     </Compile>
     <Compile Include="Отчеты.cs">
       <SubType>Form</SubType>
@@ -200,11 +230,26 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Копия Отчет Студенты.resx">
-      <DependentUpon>Копия Отчет Студенты.cs</DependentUpon>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Отчет Виды стипендий.resx">
+      <DependentUpon>Отчет Виды стипендий.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отчет Выплаты стипендий студента.resx">
+      <DependentUpon>Отчет Выплаты стипендий студента.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Отчет Результаты сессии.resx">
       <DependentUpon>Отчет Результаты сессии.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отчет Социальные признаки.resx">
+      <DependentUpon>Отчет Социальные признаки.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отчет Студенты отличники.resx">
+      <DependentUpon>Отчет Студенты отличники.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Отчет Студенты.rdlc" />
     <EmbeddedResource Include="Авторизация.resx">
@@ -242,6 +287,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Отчет Студенты.resx">
       <DependentUpon>Отчет Студенты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отчет Сумма зачисленных стипендий по месяцам.resx">
+      <DependentUpon>Отчет Сумма зачисленных стипендий по месяцам.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отчет Сумма зачисленных стипендий по факультетам.resx">
+      <DependentUpon>Отчет Сумма зачисленных стипендий по факультетам.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Отчеты.resx">
       <DependentUpon>Отчеты.cs</DependentUpon>
