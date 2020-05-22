@@ -67,6 +67,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Студенты";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -83,6 +84,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Кафедры";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -99,6 +101,7 @@
             this.button3.TabIndex = 8;
             this.button3.Text = "Группы";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -115,6 +118,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Факультеты";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -131,6 +135,7 @@
             this.button5.TabIndex = 10;
             this.button5.Text = "Результаты сессии";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -147,6 +152,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "Социальные признаки";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -163,6 +169,7 @@
             this.button7.TabIndex = 12;
             this.button7.Text = "Зачисление стипендий";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -179,6 +186,7 @@
             this.button8.TabIndex = 13;
             this.button8.Text = "Виды стипендий";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -195,6 +203,7 @@
             this.button9.TabIndex = 14;
             this.button9.Text = "Возврат";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Ввод__просмотр_и_редактирование_данных
             // 

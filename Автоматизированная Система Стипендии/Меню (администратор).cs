@@ -18,5 +18,26 @@ namespace Автоматизированная_Система_Стипендии
             mybdpath = bdpath;
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ввод__просмотр_и_редактирование_данных newForm = new Ввод__просмотр_и_редактирование_данных(mybdpath);
+            newForm.Show();
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Отчеты newForm = new Отчеты(/*mybdpath*/);
+            newForm.Show();
+            Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Меню__администратор_ newForm = new Меню__администратор_(mybdpath);
+            newForm.Show();
+            Close();
+        }
     }
 }

@@ -229,6 +229,7 @@
             this.button9.TabIndex = 18;
             this.button9.Text = "Возврат";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel1
             // 

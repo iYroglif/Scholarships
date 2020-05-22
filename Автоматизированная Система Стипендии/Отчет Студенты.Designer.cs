@@ -31,16 +31,26 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Отчет_Студенты));
+            this.СтудентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.АС_СтипендииDataSet = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet();
             this.button9 = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.АС_СтипендииDataSet = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet();
-            this.СтудентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.СтудентыTableAdapter = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSetTableAdapters.СтудентыTableAdapter();
             this.АС_СтипендииDataSet1 = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet1();
-            ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.СтудентыBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // СтудентыBindingSource
+            // 
+            this.СтудентыBindingSource.DataMember = "Студенты";
+            this.СтудентыBindingSource.DataSource = this.АС_СтипендииDataSet;
+            // 
+            // АС_СтипендииDataSet
+            // 
+            this.АС_СтипендииDataSet.DataSetName = "АС_СтипендииDataSet";
+            this.АС_СтипендииDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button9
             // 
@@ -57,6 +67,7 @@
             this.button9.TabIndex = 20;
             this.button9.Text = "Возврат";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // reportViewer1
             // 
@@ -68,16 +79,6 @@
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(710, 326);
             this.reportViewer1.TabIndex = 21;
-            // 
-            // АС_СтипендииDataSet
-            // 
-            this.АС_СтипендииDataSet.DataSetName = "АС_СтипендииDataSet";
-            this.АС_СтипендииDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // СтудентыBindingSource
-            // 
-            this.СтудентыBindingSource.DataMember = "Студенты";
-            this.СтудентыBindingSource.DataSource = this.АС_СтипендииDataSet;
             // 
             // СтудентыTableAdapter
             // 
@@ -100,8 +101,8 @@
             this.Name = "Отчет_Студенты";
             this.Text = "Отчет Студенты";
             this.Load += new System.EventHandler(this.Отчет_Студенты_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.СтудентыBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet1)).EndInit();
             this.ResumeLayout(false);
 

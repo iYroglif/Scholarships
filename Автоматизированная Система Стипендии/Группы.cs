@@ -35,5 +35,12 @@ namespace Автоматизированная_Система_Стипендии
             bindingNavigator1.BindingSource = bs;
             dataGridView1.DataSource = bs;
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Ввод__просмотр_и_редактирование_данных newForm = new Ввод__просмотр_и_редактирование_данных(mybdpath);
+            newForm.Show();
+            Close();
+        }
     }
 }

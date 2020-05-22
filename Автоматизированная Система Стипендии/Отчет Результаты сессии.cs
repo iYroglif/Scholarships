@@ -25,5 +25,12 @@ namespace Автоматизированная_Система_Стипендии
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Отчеты newForm = new Отчеты();
+            newForm.Show();
+            Close();
+        }
     }
 }
