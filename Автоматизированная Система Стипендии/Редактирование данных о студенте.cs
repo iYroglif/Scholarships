@@ -84,5 +84,32 @@ namespace Автоматизированная_Система_Стипендии
         {
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string conStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + mybdpath;
+            OleDbConnection connection = new OleDbConnection(conStr);
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            OleDbCommand command;
+
+            connection = new OleDbConnection(conStr);
+            adapter = new OleDbDataAdapter();
+            connection.Open();
+            command = new OleDbCommand("SELECT [Зачисление стипендии].[Номер транзакции], [Зачисление стипендии].Дата, Студенты.[Лицевой счет], [Виды стипендий].[Стипендия в рублях] FROM (([Зачисление стипендии] INNER JOIN Студенты ON Студенты.[ID студента] = [Зачисление стипендии].[ID студента]) INNER JOIN [Виды стипендий] ON [Виды стипендий].ID = [Зачисление стипендии].[ID стипендии]) WHERE Студенты.[ID студента] = " + textBox1.Text.ToString(), connection);
+            connection.Close();
+            adapter.SelectCommand = command;
+            DataTable dtt = new DataTable();
+            adapter.Fill(dtt);
+            adapter.Update(dtt);
+            BindingSource bss = new BindingSource();
+            bss.DataSource = dtt;
+            //bindingNavigator1.BindingSource = bss;
+            dataGridView2.DataSource = bss;
+        }
     }
 }
