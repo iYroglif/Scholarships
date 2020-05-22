@@ -213,6 +213,7 @@
             this.button1.TabIndex = 19;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button9
             // 
@@ -229,6 +230,7 @@
             this.button9.TabIndex = 18;
             this.button9.Text = "Возврат";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel1
             // 

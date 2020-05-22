@@ -23,6 +23,7 @@ namespace Автоматизированная_Система_Стипендии
         {
             Редактирование_данных_о_студенте newForm = new Редактирование_данных_о_студенте(mybdpath);
             newForm.Show();
+            Close();
         }
 
         private void button3_Click(object sender, EventArgs e)

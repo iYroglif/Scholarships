@@ -15,6 +15,8 @@ namespace Автоматизированная_Система_Стипендии
     public partial class Редактирование_данных_о_студенте : Form
     {
         static BindingSource bs, bss;
+        static OleDbDataAdapter adapter;
+        static DataTable dt;
         static List<string[]> authDate = new List<string[]>();
         static string mybdpath;
         public Редактирование_данных_о_студенте(string bdpath)
@@ -23,12 +25,12 @@ namespace Автоматизированная_Система_Стипендии
             InitializeComponent();
             string conStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + mybdpath;
             OleDbConnection connection = new OleDbConnection(conStr);
-            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            adapter = new OleDbDataAdapter();
             connection.Open();
             OleDbCommand command = new OleDbCommand("SELECT * FROM ((Студенты INNER JOIN [Результаты сессии] ON [Результаты сессии].ID = Студенты.[ID сессии]) INNER JOIN [Социальные признаки] ON [Социальные признаки].ID = Студенты.[ID социальный]) INNER JOIN Группы ON Группы.ID = Студенты.[ID группы]", connection);
             connection.Close();
             adapter.SelectCommand = command;
-            DataTable dt = new DataTable();
+            dt = new DataTable();
             adapter.Fill(dt);
             adapter.Update(dt);
             bs = new BindingSource();
@@ -67,7 +69,10 @@ namespace Автоматизированная_Система_Стипендии
             row = new ArrayList();
             foreach (DataRow dr in dt.Rows)
             {
-                row.Add(dr["Группа"].ToString());
+                if (!row.Contains(dr["Группа"].ToString()))
+                {
+                    row.Add(dr["Группа"].ToString());
+                }
             }
             comboBox3.Items.AddRange(row.ToArray());
             comboBox3.DataBindings.Add(new Binding("Text", bs, "Группа", true));
@@ -122,6 +127,23 @@ namespace Автоматизированная_Система_Стипендии
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             bs.Filter = "Convert ([Фамилия],'System.String') LIKE '" + textBox8.Text.ToString() + "%'";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        { 
+            /*
+            adapter.Update(dt);
+            this.Validate();
+            bs.EndEdit();
+            //this.tableAdapterManager.UpdateAll(dt);
+            */
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Меню__студент_ newForm = new Меню__студент_(mybdpath);
+            newForm.Show();
+            Close();
         }
     }
 }
