@@ -61,6 +61,16 @@
     <Compile Include="Авторизация.Designer.cs">
       <DependentUpon>Авторизация.cs</DependentUpon>
     </Compile>
+    <Compile Include="АС_СтипендииDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АС_СтипендииDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АС_СтипендииDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АС_СтипендииDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ввод, просмотр и редактирование данных.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +107,12 @@
     <Compile Include="Кафедры.Designer.cs">
       <DependentUpon>Кафедры.cs</DependentUpon>
     </Compile>
+    <Compile Include="Копия Отчет Студенты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Копия Отчет Студенты.Designer.cs">
+      <DependentUpon>Копия Отчет Студенты.cs</DependentUpon>
+    </Compile>
     <Compile Include="Меню %28администратор%29.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +136,18 @@
     </Compile>
     <Compile Include="О Автоматизированной системе.Designer.cs">
       <DependentUpon>О Автоматизированной системе.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Отчет Результаты сессии.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет Результаты сессии.Designer.cs">
+      <DependentUpon>Отчет Результаты сессии.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Отчет Студенты.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Отчет Студенты.Designer.cs">
+      <DependentUpon>Отчет Студенты.cs</DependentUpon>
     </Compile>
     <Compile Include="Отчеты.cs">
       <SubType>Form</SubType>
@@ -171,6 +199,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Копия Отчет Студенты.resx">
+      <DependentUpon>Копия Отчет Студенты.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отчет Результаты сессии.resx">
+      <DependentUpon>Отчет Результаты сессии.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Отчет Студенты.rdlc" />
     <EmbeddedResource Include="Авторизация.resx">
       <DependentUpon>Авторизация.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +240,9 @@
     <EmbeddedResource Include="О Автоматизированной системе.resx">
       <DependentUpon>О Автоматизированной системе.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Отчет Студенты.resx">
+      <DependentUpon>Отчет Студенты.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Отчеты.resx">
       <DependentUpon>Отчеты.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +270,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="АС_СтипендииDataSet.xsc">
+      <DependentUpon>АС_СтипендииDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АС_СтипендииDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АС_СтипендииDataSet.xss">
+      <DependentUpon>АС_СтипендииDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet1.xsc">
+      <DependentUpon>АС_СтипендииDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АС_СтипендииDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АС_СтипендииDataSet1.xss">
+      <DependentUpon>АС_СтипендииDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -255,6 +316,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="АС Стипендии.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

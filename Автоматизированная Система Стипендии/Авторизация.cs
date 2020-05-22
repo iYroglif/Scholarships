@@ -25,8 +25,8 @@ namespace Автоматизированная_Система_Стипендии
         private void button1_Click(object sender, EventArgs e)
         {
             //
-            /*Отчеты newForm = new Отчеты();
-            newForm.Show();*/
+            Отчет_Студенты newForm = new Отчет_Студенты();
+            newForm.Show();
             //
             if (comboBox1.SelectedItem != null)
             {
