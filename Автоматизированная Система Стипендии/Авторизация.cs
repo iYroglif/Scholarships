@@ -25,8 +25,10 @@ namespace Автоматизированная_Система_Стипендии
         private void button1_Click(object sender, EventArgs e)
         {
             //
-            Отчет_Студенты newForm = new Отчет_Студенты();
+
+            Меню__администратор_ newForm = new Меню__администратор_(mybdpath);
             newForm.Show();
+            
             //
             if (comboBox1.SelectedItem != null)
             {
@@ -40,7 +42,8 @@ namespace Автоматизированная_Система_Стипендии
                                 if (textBox1.Text.ToString() == authDate[i][1]) 
                                 {
                                     Меню__администратор_ menuForm = new Меню__администратор_(mybdpath);
-                                    menuForm.ShowDialog();
+                                    menuForm.Show();
+                                    Hide();
                                 }
                                 else MessageBox.Show("Неверный пароль", "Ошибка");
                             }
@@ -54,7 +57,8 @@ namespace Автоматизированная_Система_Стипендии
                                 if (textBox1.Text.ToString() == authDate[i][1])
                                 {
                                     Меню__сотрудник_ menuForm = new Меню__сотрудник_(mybdpath);
-                                    menuForm.ShowDialog();
+                                    menuForm.Show();
+                                    Hide();
                                 }
                                 else MessageBox.Show("Неверный пароль", "Ошибка");
                             }
@@ -115,6 +119,17 @@ namespace Автоматизированная_Система_Стипендии
                 connection.Close();
             }
             catch { }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            О_Автоматизированной_системе menuForm = new О_Автоматизированной_системе();
+            menuForm.ShowDialog();
         }
     }
 }

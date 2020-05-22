@@ -16,5 +16,10 @@ namespace Автоматизированная_Система_Стипендии
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
