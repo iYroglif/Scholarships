@@ -68,7 +68,7 @@ namespace Автоматизированная_Система_Стипендии
             connection = new OleDbConnection(conStr);
             adapter = new OleDbDataAdapter();
             connection.Open();
-            command = new OleDbCommand("SELECT [Зачисление стипендии].[Номер транзакции], [Зачисление стипендии].Дата, Студенты.[Лицевой счет], [Виды стипендий].[Стипендия в рублях] FROM (([Зачисление стипендии] INNER JOIN Студенты ON Студенты.[ID студента] = [Зачисление стипендии].[ID студента]) INNER JOIN [Виды стипендий] ON [Виды стипендий].ID = [Зачисление стипендии].[ID стипендии]) WHERE Студенты.Фамилия = 'Терентьев'", connection);
+            command = new OleDbCommand("SELECT [Зачисление стипендии].[Номер транзакции], [Зачисление стипендии].Дата, Студенты.[Лицевой счет], [Виды стипендий].[Стипендия в рублях] FROM (([Зачисление стипендии] INNER JOIN Студенты ON Студенты.[ID студента] = [Зачисление стипендии].[ID студента]) INNER JOIN [Виды стипендий] ON [Виды стипендий].ID = [Зачисление стипендии].[ID стипендии]) WHERE Студенты.[ID студента] = " + textBox1.Text.ToString(), connection);
             connection.Close();
             adapter.SelectCommand = command;
             DataTable dtt = new DataTable();
