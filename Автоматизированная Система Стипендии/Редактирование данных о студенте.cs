@@ -14,6 +14,7 @@ namespace Автоматизированная_Система_Стипендии
 {
     public partial class Редактирование_данных_о_студенте : Form
     {
+        static BindingSource bs, bss;
         static List<string[]> authDate = new List<string[]>();
         static string mybdpath;
         public Редактирование_данных_о_студенте(string bdpath)
@@ -30,7 +31,7 @@ namespace Автоматизированная_Система_Стипендии
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             adapter.Update(dt);
-            BindingSource bs = new BindingSource();
+            bs = new BindingSource();
             bs.DataSource = dt;
             bindingNavigator1.BindingSource = bs;
             //dataGridView1.DataSource = bs;
@@ -44,7 +45,10 @@ namespace Автоматизированная_Система_Стипендии
 
             ArrayList row = new ArrayList();
             foreach (DataRow dr in dt.Rows) {
-                row.Add(dr["Сессия закрыта на"].ToString());
+                if (!row.Contains(dr["Сессия закрыта на"].ToString()))
+                {
+                    row.Add(dr["Сессия закрыта на"].ToString());
+                }
             }
             comboBox1.Items.AddRange(row.ToArray());
             comboBox1.DataBindings.Add(new Binding("Text", bs, "Сессия закрыта на", true));
@@ -52,7 +56,10 @@ namespace Автоматизированная_Система_Стипендии
             row = new ArrayList();
             foreach (DataRow dr in dt.Rows)
             {
+                if (!row.Contains(dr["Социальный признак"].ToString()))
+                {
                 row.Add(dr["Социальный признак"].ToString());
+                }
             }
             comboBox2.Items.AddRange(row.ToArray());
             comboBox2.DataBindings.Add(new Binding("Text", bs, "Социальный признак", true));
@@ -74,7 +81,7 @@ namespace Автоматизированная_Система_Стипендии
             DataTable dtt = new DataTable();
             adapter.Fill(dtt);
             adapter.Update(dtt);
-            BindingSource bss = new BindingSource();
+            bss = new BindingSource();
             bss.DataSource = dtt;
             //bindingNavigator1.BindingSource = bss;
             dataGridView2.DataSource = bss;
@@ -106,10 +113,15 @@ namespace Автоматизированная_Система_Стипендии
             DataTable dtt = new DataTable();
             adapter.Fill(dtt);
             adapter.Update(dtt);
-            BindingSource bss = new BindingSource();
+            bss = new BindingSource();
             bss.DataSource = dtt;
             //bindingNavigator1.BindingSource = bss;
             dataGridView2.DataSource = bss;
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            bs.Filter = "Convert ([Фамилия],'System.String') LIKE '" + textBox8.Text.ToString() + "%'";
         }
     }
 }
