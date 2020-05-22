@@ -12,10 +12,15 @@ namespace Автоматизированная_Система_Стипендии
 {
     public partial class Отчеты : Form
     {
-        //static string mybdpath;
-        public Отчеты(/*string bdpath*/)
+        static string mybdpath;
+        public Отчеты(string bdpath)
         {
-            //mybdpath = bdpath;
+            mybdpath = bdpath;
+            InitializeComponent();
+        }
+
+        public Отчеты()
+        {
             InitializeComponent();
         }
 

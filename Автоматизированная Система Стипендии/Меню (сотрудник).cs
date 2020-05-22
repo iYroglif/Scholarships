@@ -27,7 +27,16 @@ namespace Автоматизированная_Система_Стипендии
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Результаты_сессии newForm = new Результаты_сессии(mybdpath);
+            newForm.Show();
+            Close();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Авторизация newForm = new Авторизация();
+            newForm.Show();
+            Close();
         }
     }
 }
