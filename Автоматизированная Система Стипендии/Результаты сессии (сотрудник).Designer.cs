@@ -294,8 +294,9 @@
             this.textBox1.Size = new System.Drawing.Size(207, 26);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Результаты_сессии
+            // Результаты_сессии__сотрудник_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -308,7 +309,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bindingNavigator1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Результаты_сессии";
+            this.Name = "Результаты_сессии__сотрудник_";
             this.Text = "Результаты сессии (сотрудник)";
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);

@@ -115,6 +115,13 @@ namespace Автоматизированная_Система_Стипендии
             this.Validate();
             this.студентыBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.аС_СтипендииDataSet2);
+            MessageBox.Show(
+        "Данные сохранены",
+        "Сообщение",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information,
+        MessageBoxDefaultButton.Button1,
+        MessageBoxOptions.DefaultDesktopOnly);
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -142,6 +149,14 @@ namespace Автоматизированная_Система_Стипендии
             bss.DataSource = dtt;
             //bindingNavigator1.BindingSource = bss;
             dataGridView2.DataSource = bss;
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "31";
+            comboBox3.Text = "";
+            comboBox1.Text = "";
+            comboBox2.Text = "";
         }
     }
 }

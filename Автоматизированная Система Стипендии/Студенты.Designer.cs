@@ -132,6 +132,7 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -528,9 +529,9 @@
             this.iDСессииDataGridViewTextBoxColumn,
             this.iDСоциальныйDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.студентыBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(439, 323);
+            this.dataGridView1.Location = new System.Drawing.Point(52, 417);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(10, 10);
             this.dataGridView1.TabIndex = 31;
             // 
             // аС_СтипендииDataSet2
@@ -622,13 +623,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Автоматизированная_Система_Стипендии.Properties.Resources.background2;
             this.ClientSize = new System.Drawing.Size(1006, 576);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Студенты";
             this.Text = "Студенты";

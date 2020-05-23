@@ -34,11 +34,30 @@ namespace Автоматизированная_Система_Стипендии
             bs.DataSource = dt;
             bindingNavigator1.BindingSource = bs;
             dataGridView1.DataSource = bs;
+            textBox3.DataBindings.Add(new Binding("Text", bs, "ID", true));
+            textBox2.DataBindings.Add(new Binding("Text", bs, "Группа", true));
+            ArrayList row = new ArrayList();
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (!row.Contains(dr["Кафедра"].ToString()))
+                {
+                    row.Add(dr["Кафедра"].ToString());
+                }
+            }
+            comboBox2.Items.AddRange(row.ToArray());
+            comboBox2.DataBindings.Add(new Binding("Text", bs, "Кафедра", true));
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             Ввод__просмотр_и_редактирование_данных newForm = new Ввод__просмотр_и_редактирование_данных(mybdpath);
+            newForm.Show();
+            Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Группы_Студенты newForm = new Группы_Студенты(mybdpath, textBox3.Text.ToString());
             newForm.Show();
             Close();
         }

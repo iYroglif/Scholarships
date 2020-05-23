@@ -33,5 +33,16 @@ namespace Автоматизированная_Система_Стипендии
                 return ((string)(this["АС_СтипендииConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\"D:\\Desktop\\New folder (16)\\АС Стип" +
+            "ендии.accdb\"")]
+        public string АС_СтипендииConnectionString1 {
+            get {
+                return ((string)(this["АС_СтипендииConnectionString1"]));
+            }
+        }
     }
 }

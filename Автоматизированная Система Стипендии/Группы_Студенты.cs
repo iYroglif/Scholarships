@@ -16,7 +16,7 @@ namespace Автоматизированная_Система_Стипендии
     {
         static List<string[]> authDate = new List<string[]>();
         static string mybdpath;
-        public Группы_Студенты(string bdpath)
+        public Группы_Студенты(string bdpath, string id)
         {
             mybdpath = bdpath;
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace Автоматизированная_Система_Стипендии
             OleDbConnection connection = new OleDbConnection(conStr);
             OleDbDataAdapter adapter = new OleDbDataAdapter();
             connection.Open();
-            OleDbCommand command = new OleDbCommand("SELECT Студенты.[ID студента], Студенты.Фамилия, Студенты.Имя, Студенты.Отчество, [Результаты сессии].[Сессия закрыта на], [Социальные признаки].[Социальный признак] FROM ((Студенты INNER JOIN [Результаты сессии] ON [Результаты сессии].[ID] = Студенты.[ID сессии]) INNER JOIN [Социальные признаки] ON [Социальные признаки].[ID] = Студенты.[ID социальный]) WHERE Студенты.[ID группы] = 1", connection);
+            OleDbCommand command = new OleDbCommand("SELECT Студенты.[ID студента], Студенты.Фамилия, Студенты.Имя, Студенты.Отчество, [Результаты сессии].[Сессия закрыта на], [Социальные признаки].[Социальный признак] FROM ((Студенты INNER JOIN [Результаты сессии] ON [Результаты сессии].[ID] = Студенты.[ID сессии]) INNER JOIN [Социальные признаки] ON [Социальные признаки].[ID] = Студенты.[ID социальный]) WHERE Студенты.[ID группы] = " + id, connection);
             connection.Close();
             adapter.SelectCommand = command;
             DataTable dt = new DataTable();
@@ -39,6 +39,13 @@ namespace Автоматизированная_Система_Стипендии
         private void Группы_Студенты_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Группы newForm = new Группы(mybdpath);
+            newForm.Show();
+            Close();
         }
     }
 }

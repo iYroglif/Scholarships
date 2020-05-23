@@ -76,6 +76,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>АС_СтипендииDataSet22.xsd</DependentUpon>
     </Compile>
+    <Compile Include="АС_СтипендииDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АС_СтипендииDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="АС_СтипендииDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АС_СтипендииDataSet41.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ввод, просмотр и редактирование данных.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -376,6 +386,28 @@
     </None>
     <None Include="АС_СтипендииDataSet22.xss">
       <DependentUpon>АС_СтипендииDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet31.xsc">
+      <DependentUpon>АС_СтипендииDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АС_СтипендииDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АС_СтипендииDataSet31.xss">
+      <DependentUpon>АС_СтипендииDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet41.xsc">
+      <DependentUpon>АС_СтипендииDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АС_СтипендииDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АС_СтипендииDataSet41.xss">
+      <DependentUpon>АС_СтипендииDataSet41.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
