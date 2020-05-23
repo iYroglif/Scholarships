@@ -83,5 +83,16 @@ namespace Автоматизированная_Система_Стипендии
             //bindingNavigator1.BindingSource = bss;
             dataGridView1.DataSource = bss;
         }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+            MessageBox.Show(
+        "Данные сохранены",
+        "Сообщение",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information,
+        MessageBoxDefaultButton.Button1,
+        MessageBoxOptions.DefaultDesktopOnly);
+        }
     }
 }

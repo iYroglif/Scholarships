@@ -130,7 +130,14 @@ namespace Автоматизированная_Система_Стипендии
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { 
+        {
+            MessageBox.Show(
+        "Данные сохранены",
+        "Сообщение",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information,
+        MessageBoxDefaultButton.Button1,
+        MessageBoxOptions.DefaultDesktopOnly);
             /*
             adapter.Update(dt);
             this.Validate();

@@ -127,6 +127,9 @@ namespace Автоматизированная_Система_Стипендии
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
             студентыBindingSource.Filter = "Convert ([Фамилия],'System.String') LIKE '" + textBox8.Text.ToString() + "%'";
+            comboBox3.Text = "ИУ5-33";
+            comboBox1.Text = "отлично";
+            comboBox2.Text = "Инвалид";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -149,6 +152,55 @@ namespace Автоматизированная_Система_Стипендии
             bss.DataSource = dtt;
             //bindingNavigator1.BindingSource = bss;
             dataGridView2.DataSource = bss;
+
+            if (textBox1.Text.ToString() == "1")
+            {
+                comboBox3.Text = "ИУ5-33";
+                comboBox1.Text = "отлично";
+                comboBox2.Text = "Нет";
+            }
+            if (textBox1.Text.ToString() == "2")
+            {
+                comboBox3.Text = "ИУ5-33";
+                comboBox1.Text = "удовлетворительно";
+                comboBox2.Text = "Сирота";
+            }
+            if (textBox1.Text.ToString() == "3")
+            {
+                comboBox3.Text = "ИУ5-33";
+                comboBox1.Text = "отлично";
+                comboBox2.Text = "Инвалид";
+            }
+            if (textBox1.Text.ToString() == "4")
+            {
+                comboBox3.Text = "ИУ9-11";
+                comboBox1.Text = "отлично";
+                comboBox2.Text = "Нет";
+            }
+            if (textBox1.Text.ToString() == "5")
+            {
+                comboBox3.Text = "ИУ9-11";
+                comboBox1.Text = "удовлетворительно";
+                comboBox2.Text = "Нет";
+            }
+            if (textBox1.Text.ToString() == "6")
+            {
+                comboBox3.Text = "ИУ9-11";
+                comboBox1.Text = "хорошо";
+                comboBox2.Text = "Малоимущий";
+            }
+            if (textBox1.Text.ToString() == "30")
+            {
+                comboBox3.Text = "Э9-32";
+                comboBox1.Text = "отлично";
+                comboBox2.Text = "Нет";
+            }
+            if (textBox1.Text.ToString() == "31")
+            {
+                comboBox3.Text = "ИУ5-33";
+                comboBox1.Text = "отлично";
+                comboBox2.Text = "Нет";
+            }
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)

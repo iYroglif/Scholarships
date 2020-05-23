@@ -351,8 +351,9 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Зачисление_стипендий
+            // Зачисление_стипендий__сотрудник_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -364,7 +365,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Зачисление_стипендий";
+            this.Name = "Зачисление_стипендий__сотрудник_";
             this.Text = "Зачисление стипендий (сотрудник)";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
