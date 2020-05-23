@@ -25,20 +25,20 @@ namespace Автоматизированная_Система_Стипендии
             InitializeComponent();
             string conStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + mybdpath;
             OleDbConnection connection = new OleDbConnection(conStr);
-            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            adapter = new OleDbDataAdapter();
             connection.Open();
-            OleDbCommand command = new OleDbCommand("SELECT * FROM (Кафедры INNER JOIN Факультеты ON Кафедры.[ID факультета] = Факультеты.ID)", connection);
+            OleDbCommand command = new OleDbCommand("SELECT Кафедры.ID, Кафедры.Кафедра, Факультеты.Факультет FROM (Кафедры INNER JOIN Факультеты ON Кафедры.[ID факультета] = Факультеты.ID)", connection);
             connection.Close();
             adapter.SelectCommand = command;
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             adapter.Update(dt);
-            BindingSource bs = new BindingSource();
+            bs = new BindingSource();
             bs.DataSource = dt;
             bindingNavigator1.BindingSource = bs;
             //dataGridView1.DataSource = bs;
-            textBox1.DataBindings.Add(new Binding("Text", bs, "Кафедры.ID", true));
-            textBox2.DataBindings.Add(new Binding("Text", bs, "Кафедры.Кафедра", true));
+            textBox1.DataBindings.Add(new Binding("Text", bs, "ID", true));
+            textBox2.DataBindings.Add(new Binding("Text", bs, "Кафедра", true));
             ArrayList row = new ArrayList();
             foreach (DataRow dr in dt.Rows)
             {
@@ -75,7 +75,7 @@ namespace Автоматизированная_Система_Стипендии
 
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
-            bs.Filter = "Convert ([Кафедры.Кафедра],'System.String') LIKE '%" + textBox8.Text.ToString() + "%'";
+            bs.Filter = "Convert ([Кафедра],'System.String') LIKE '%" + textBox8.Text.ToString() + "%'";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

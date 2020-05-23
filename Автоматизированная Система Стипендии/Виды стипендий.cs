@@ -34,6 +34,9 @@ namespace Автоматизированная_Система_Стипендии
             bs.DataSource = dt;
             bindingNavigator1.BindingSource = bs;
             dataGridView1.DataSource = bs;
+            textBox2.DataBindings.Add(new Binding("Text", bs, "ID", true));
+            textBox3.DataBindings.Add(new Binding("Text", bs, "Название", true));
+            textBox1.DataBindings.Add(new Binding("Text", bs, "Стипендия в рублях", true));
         }
 
         private void button9_Click(object sender, EventArgs e)

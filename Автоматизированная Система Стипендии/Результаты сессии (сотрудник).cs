@@ -37,6 +37,8 @@ namespace Автоматизированная_Система_Стипендии
             bindingNavigator1.BindingSource = bs;
             //dataGridView1.DataSource = bs;
             textBox1.DataBindings.Add(new Binding("Text", bs, "ID", true));
+            textBox2.DataBindings.Add(new Binding("Text", bs, "Дата", true));
+            textBox3.DataBindings.Add(new Binding("Text", bs, "Сессия закрыта на", true));
 
             connection = new OleDbConnection(conStr);
             adapter = new OleDbDataAdapter();

@@ -34,6 +34,8 @@ namespace Автоматизированная_Система_Стипендии
             bs.DataSource = dt;
             bindingNavigator1.BindingSource = bs;
             //dataGridView1.DataSource = bs;
+            textBox1.DataBindings.Add(new Binding("Text", bs, "ID", true));
+            textBox2.DataBindings.Add(new Binding("Text", bs, "Факультет", true));
 
             connection = new OleDbConnection(conStr);
             adapter = new OleDbDataAdapter();
@@ -55,6 +57,28 @@ namespace Автоматизированная_Система_Стипендии
             Ввод__просмотр_и_редактирование_данных newForm = new Ввод__просмотр_и_редактирование_данных(mybdpath);
             newForm.Show();
             Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string conStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + mybdpath;
+            OleDbConnection connection = new OleDbConnection(conStr);
+            OleDbDataAdapter adapter = new OleDbDataAdapter();
+            OleDbCommand command;
+
+            connection = new OleDbConnection(conStr);
+            adapter = new OleDbDataAdapter();
+            connection.Open();
+            command = new OleDbCommand("SELECT ID, Кафедра FROM Кафедры WHERE Кафедры.[ID факультета] = " + textBox1.Text.ToString(), connection);
+            connection.Close();
+            adapter.SelectCommand = command;
+            DataTable dtt = new DataTable();
+            adapter.Fill(dtt);
+            adapter.Update(dtt);
+            BindingSource bss = new BindingSource();
+            bss.DataSource = dtt;
+            //bindingNavigator1.BindingSource = bss;
+            dataGridView1.DataSource = bss;
         }
     }
 }

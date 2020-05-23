@@ -271,6 +271,7 @@
             this.textBox1.Size = new System.Drawing.Size(207, 26);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Факультеты
             // 
