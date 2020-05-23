@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>АС_СтипендииDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="АС_СтипендииDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АС_СтипендииDataSet22.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ввод, просмотр и редактирование данных.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +365,17 @@
     </None>
     <None Include="АС_СтипендииDataSet1.xss">
       <DependentUpon>АС_СтипендииDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet22.xsc">
+      <DependentUpon>АС_СтипендииDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АС_СтипендииDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АС_СтипендииDataSet22.xss">
+      <DependentUpon>АС_СтипендииDataSet22.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -70,16 +70,35 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.аС_СтипендииDataSet2 = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet2();
+            this.студентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.студентыTableAdapter = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet2TableAdapters.СтудентыTableAdapter();
+            this.tableAdapterManager = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet2TableAdapters.TableAdapterManager();
+            this.iDСтудентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.лицевойСчетDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.курсDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDГруппыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDСессииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDСоциальныйDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.аС_СтипендииDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.студентыBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.студентыBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -213,6 +232,7 @@
             this.button1.TabIndex = 19;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button9
             // 
@@ -278,6 +298,7 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(207, 26);
             this.textBox8.TabIndex = 28;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // comboBox2
             // 
@@ -311,6 +332,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.студентыBindingSource, "Отчество", true));
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox5.Location = new System.Drawing.Point(181, 253);
             this.textBox5.Name = "textBox5";
@@ -320,6 +342,7 @@
             // 
             // textBox4
             // 
+            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.студентыBindingSource, "Имя", true));
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox4.Location = new System.Drawing.Point(181, 209);
             this.textBox4.Name = "textBox4";
@@ -329,6 +352,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.студентыBindingSource, "Фамилия", true));
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.Location = new System.Drawing.Point(181, 166);
             this.textBox3.Name = "textBox3";
@@ -378,6 +402,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.студентыBindingSource, "Телефон", true));
             this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox7.Location = new System.Drawing.Point(649, 117);
             this.textBox7.Name = "textBox7";
@@ -427,6 +452,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.студентыBindingSource, "Лицевой счет", true));
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(181, 119);
             this.textBox2.Name = "textBox2";
@@ -446,12 +472,14 @@
             // 
             // textBox1
             // 
+            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.студентыBindingSource, "ID студента", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, "1"));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(181, 73);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(207, 26);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "1";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -465,6 +493,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.студентыBindingSource, "Курс", true));
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox6.Location = new System.Drawing.Point(649, 71);
             this.textBox6.Name = "textBox6";
@@ -483,12 +512,117 @@
             this.label12.TabIndex = 30;
             this.label12.Text = " Зачисление стипендии:";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDСтудентаDataGridViewTextBoxColumn,
+            this.лицевойСчетDataGridViewTextBoxColumn,
+            this.фамилияDataGridViewTextBoxColumn,
+            this.имяDataGridViewTextBoxColumn,
+            this.отчествоDataGridViewTextBoxColumn,
+            this.курсDataGridViewTextBoxColumn,
+            this.телефонDataGridViewTextBoxColumn,
+            this.iDГруппыDataGridViewTextBoxColumn,
+            this.iDСессииDataGridViewTextBoxColumn,
+            this.iDСоциальныйDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.студентыBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(439, 323);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 31;
+            // 
+            // аС_СтипендииDataSet2
+            // 
+            this.аС_СтипендииDataSet2.DataSetName = "АС_СтипендииDataSet2";
+            this.аС_СтипендииDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // студентыBindingSource
+            // 
+            this.студентыBindingSource.DataMember = "Студенты";
+            this.студентыBindingSource.DataSource = this.аС_СтипендииDataSet2;
+            // 
+            // студентыTableAdapter
+            // 
+            this.студентыTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = Автоматизированная_Система_Стипендии.АС_СтипендииDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ГруппыTableAdapter = null;
+            this.tableAdapterManager.Зачисление_стипендииTableAdapter = null;
+            this.tableAdapterManager.Социальные_признакиTableAdapter = null;
+            this.tableAdapterManager.СтудентыTableAdapter = this.студентыTableAdapter;
+            // 
+            // iDСтудентаDataGridViewTextBoxColumn
+            // 
+            this.iDСтудентаDataGridViewTextBoxColumn.DataPropertyName = "ID студента";
+            this.iDСтудентаDataGridViewTextBoxColumn.HeaderText = "ID студента";
+            this.iDСтудентаDataGridViewTextBoxColumn.Name = "iDСтудентаDataGridViewTextBoxColumn";
+            // 
+            // лицевойСчетDataGridViewTextBoxColumn
+            // 
+            this.лицевойСчетDataGridViewTextBoxColumn.DataPropertyName = "Лицевой счет";
+            this.лицевойСчетDataGridViewTextBoxColumn.HeaderText = "Лицевой счет";
+            this.лицевойСчетDataGridViewTextBoxColumn.Name = "лицевойСчетDataGridViewTextBoxColumn";
+            // 
+            // фамилияDataGridViewTextBoxColumn
+            // 
+            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            // 
+            // имяDataGridViewTextBoxColumn
+            // 
+            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
+            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
+            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
+            // 
+            // отчествоDataGridViewTextBoxColumn
+            // 
+            this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
+            this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
+            this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
+            // 
+            // курсDataGridViewTextBoxColumn
+            // 
+            this.курсDataGridViewTextBoxColumn.DataPropertyName = "Курс";
+            this.курсDataGridViewTextBoxColumn.HeaderText = "Курс";
+            this.курсDataGridViewTextBoxColumn.Name = "курсDataGridViewTextBoxColumn";
+            // 
+            // телефонDataGridViewTextBoxColumn
+            // 
+            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
+            // 
+            // iDГруппыDataGridViewTextBoxColumn
+            // 
+            this.iDГруппыDataGridViewTextBoxColumn.DataPropertyName = "ID группы";
+            this.iDГруппыDataGridViewTextBoxColumn.HeaderText = "ID группы";
+            this.iDГруппыDataGridViewTextBoxColumn.Name = "iDГруппыDataGridViewTextBoxColumn";
+            // 
+            // iDСессииDataGridViewTextBoxColumn
+            // 
+            this.iDСессииDataGridViewTextBoxColumn.DataPropertyName = "ID сессии";
+            this.iDСессииDataGridViewTextBoxColumn.HeaderText = "ID сессии";
+            this.iDСессииDataGridViewTextBoxColumn.Name = "iDСессииDataGridViewTextBoxColumn";
+            // 
+            // iDСоциальныйDataGridViewTextBoxColumn
+            // 
+            this.iDСоциальныйDataGridViewTextBoxColumn.DataPropertyName = "ID социальный";
+            this.iDСоциальныйDataGridViewTextBoxColumn.HeaderText = "ID социальный";
+            this.iDСоциальныйDataGridViewTextBoxColumn.Name = "iDСоциальныйDataGridViewTextBoxColumn";
+            // 
             // Студенты
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Автоматизированная_Система_Стипендии.Properties.Resources.background2;
             this.ClientSize = new System.Drawing.Size(1006, 576);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button9);
@@ -506,6 +640,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.аС_СтипендииDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.студентыBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,5 +690,20 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private АС_СтипендииDataSet2 аС_СтипендииDataSet2;
+        private System.Windows.Forms.BindingSource студентыBindingSource;
+        private АС_СтипендииDataSet2TableAdapters.СтудентыTableAdapter студентыTableAdapter;
+        private АС_СтипендииDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDСтудентаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn лицевойСчетDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn фамилияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn имяDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn отчествоDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn курсDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDГруппыDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDСессииDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDСоциальныйDataGridViewTextBoxColumn;
     }
 }
