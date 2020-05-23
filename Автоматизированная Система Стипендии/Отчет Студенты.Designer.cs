@@ -31,26 +31,20 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Отчет_Студенты));
-            this.СтудентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.АС_СтипендииDataSet = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet();
             this.button9 = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.СтудентыBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.АС_СтипендииDataSet = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet();
             this.СтудентыTableAdapter = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSetTableAdapters.СтудентыTableAdapter();
             this.АС_СтипендииDataSet1 = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet1();
+            this.АС_СтипендииDataSet4 = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet4();
+            this.АС_СтипендииDataSet5 = new Автоматизированная_Система_Стипендии.АС_СтипендииDataSet5();
             ((System.ComponentModel.ISupportInitialize)(this.СтудентыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet5)).BeginInit();
             this.SuspendLayout();
-            // 
-            // СтудентыBindingSource
-            // 
-            this.СтудентыBindingSource.DataMember = "Студенты";
-            this.СтудентыBindingSource.DataSource = this.АС_СтипендииDataSet;
-            // 
-            // АС_СтипендииDataSet
-            // 
-            this.АС_СтипендииDataSet.DataSetName = "АС_СтипендииDataSet";
-            this.АС_СтипендииDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button9
             // 
@@ -80,6 +74,16 @@
             this.reportViewer1.Size = new System.Drawing.Size(710, 326);
             this.reportViewer1.TabIndex = 21;
             // 
+            // СтудентыBindingSource
+            // 
+            this.СтудентыBindingSource.DataMember = "Студенты";
+            this.СтудентыBindingSource.DataSource = this.АС_СтипендииDataSet;
+            // 
+            // АС_СтипендииDataSet
+            // 
+            this.АС_СтипендииDataSet.DataSetName = "АС_СтипендииDataSet";
+            this.АС_СтипендииDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // СтудентыTableAdapter
             // 
             this.СтудентыTableAdapter.ClearBeforeFill = true;
@@ -88,6 +92,16 @@
             // 
             this.АС_СтипендииDataSet1.DataSetName = "АС_СтипендииDataSet1";
             this.АС_СтипендииDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // АС_СтипендииDataSet4
+            // 
+            this.АС_СтипендииDataSet4.DataSetName = "АС_СтипендииDataSet4";
+            this.АС_СтипендииDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // АС_СтипендииDataSet5
+            // 
+            this.АС_СтипендииDataSet5.DataSetName = "АС_СтипендииDataSet5";
+            this.АС_СтипендииDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Отчет_Студенты
             // 
@@ -104,6 +118,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.СтудентыBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.АС_СтипендииDataSet5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -116,5 +132,7 @@
         private АС_СтипендииDataSet АС_СтипендииDataSet;
         private АС_СтипендииDataSetTableAdapters.СтудентыTableAdapter СтудентыTableAdapter;
         private АС_СтипендииDataSet1 АС_СтипендииDataSet1;
+        private АС_СтипендииDataSet4 АС_СтипендииDataSet4;
+        private АС_СтипендииDataSet5 АС_СтипендииDataSet5;
     }
 }

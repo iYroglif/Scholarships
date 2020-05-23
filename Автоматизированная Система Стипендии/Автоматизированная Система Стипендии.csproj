@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>АС_СтипендииDataSet41.xsd</DependentUpon>
     </Compile>
+    <Compile Include="АС_СтипендииDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>АС_СтипендииDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Ввод, просмотр и редактирование данных.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +268,7 @@
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
     <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
     <EmbeddedResource Include="Зачисление стипендий %28сотрудник%29.resx">
       <DependentUpon>Зачисление стипендий %28сотрудник%29.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,6 +414,17 @@
     </None>
     <None Include="АС_СтипендииDataSet41.xss">
       <DependentUpon>АС_СтипендииDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet5.xsc">
+      <DependentUpon>АС_СтипендииDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="АС_СтипендииDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>АС_СтипендииDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="АС_СтипендииDataSet5.xss">
+      <DependentUpon>АС_СтипендииDataSet5.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
